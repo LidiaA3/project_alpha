@@ -210,7 +210,8 @@ footer p {
     opacity: 0.7;
 }
 
-button {
+button,
+.btn {
     width: 100%;
     background-color: #faf5f4;
     color:#4b0000;
@@ -223,6 +224,7 @@ button {
     margin: 1.8rem 0;
     font-size: 1.8rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 button:hover {
