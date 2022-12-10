@@ -1,0 +1,38 @@
+.intro {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: #faf5f4;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(75, 0, 0, 0.2), rgba(75, 0, 0, 0.2)), url(../imgs/intro.jpg);
+    background-size: cover;
+}
+
+.introcontents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    width: calc(100% - 8rem);
+}
+
+.intro button {
+    margin: 0;
+}
