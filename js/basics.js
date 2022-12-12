@@ -1,25 +1,23 @@
-const toggle_button = document.getElementById('js-button-toggle');
-const menu = document.getElementById('js-id-menu');
+const toggle_button = document.querySelector('#js-button-toggle');
+const menu = document.querySelector('#js-id-menu');
 
 function toggle_menu () {
-    if (menu.style.display === 'none') {
+    if (menu.style.display === 'none'|| menu.style.display === '') {
         menu.style.display = 'flex';
     } else {
         menu.style.display = 'none';
     }
 }
 
-const intro = document.getElementById('js-intro-container');
+const intro = document.querySelector('#js-intro-container');
+intro.style.display = 'flex';
 
 function introDisplayNone () {
     intro.style.display = 'none';
+    toggle_button.style.stroke = "#4b0000";
 }
 
 function introDisplayFlex () {
     intro.style.display = 'flex';
-}
-
-if (intro.style.display === 'none') {
-    alert('Hi! I am active');
-    toggle_button.style.stroke = "#4b0000";
+    toggle_button.style.stroke = "#faf5f4";
 }
