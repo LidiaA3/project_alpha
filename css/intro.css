@@ -19,8 +19,10 @@
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: linear-gradient(0deg, rgba(75, 0, 0, 0.2), rgba(75, 0, 0, 0.2)), url(../imgs/intro.jpg);
+    background: linear-gradient(0deg, rgba(75, 0, 0, 0.7), rgba(75, 0, 0, 0.7)), url(../imgs/intro.jpg);
+    filter: saturate(30%);
     background-size: cover;
+    background-position: center center;
 }
 
 .introcontents {
@@ -35,4 +37,12 @@
 
 .intro button {
     margin: 0;
+}
+
+.intro .name {
+    font-size: 5rem;
+}
+
+.intro .claim {
+    font-size: 2rem;
 }

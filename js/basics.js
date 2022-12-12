@@ -19,7 +19,7 @@ function introDisplayFlex () {
     intro.style.display = 'flex';
 }
 
-if (intro.style.display === 'flex') {
+if (intro.style.display === 'none') {
     alert('Hi! I am active');
-    toggle_button.style.stroke = "#faf5f4";
+    toggle_button.style.stroke = "#4b0000";
 }
