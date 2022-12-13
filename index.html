@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="css/intro.css">
 </head>
 <body>
+    <!--HERE START THE INTRO SECTION-->
     <div class="intro" id="js-intro-container">
         <div class="introcontents">
-            <div class="logo color-cream">
+            <div class="logo color-light">
                 <div class="name">
                     <p class="font-weight--bold">Lidia</p>
                     <p class="font-weight--thin">Aullana</p>
@@ -29,8 +30,27 @@
             </div>
             <button onclick="introDisplayNone()">saber más</button>
         </div>
+        <div class="iconcontainerintro">
+            <a href="https://es.linkedin.com/in/lidia-aullana-083433213" target="_blank"><svg width="2.4rem" height="2.4rem" viewBox="0 0 100% 100%">
+                <use xlink:href="#linkedin"></use>
+            </svg></a>
+            <a href="https://github.com/LidiaA3" target="_blank"><svg width="2.4rem" height="2.4rem" viewBox="0 0 100% 100%">
+                <use xlink:href="#github"></use>
+            </svg></a>
+            <a href="https://codepen.io/LidiaA3" target="_blank"><svg width="2.4rem" height="2.4rem" viewBox="0 0 100% 100%">
+                <use xlink:href="#codepen"></use>
+            </svg></a>
+            <a href="https://www.instagram.com/lidia.a1999/" target="_blank"><svg width="2.4rem" height="2.4rem" viewBox="0 0 100% 100%">
+                <use xlink:href="#instagram"></use>
+            </svg></a>
+            <a href="https://twitter.com/lidiaA3_99" target="_blank"><svg width="2.4rem" height="2.4rem" viewBox="0 0 20% 20%">
+                <use xlink:href="#twitter"></use>
+            </svg></a>
+        </div>
         <div class="bg-img"></div>
     </div>
+
+    <!--HERE START THE SVG ICONS DEFINITION-->
     <svg width="0" height="0" viewBox(0 0 1 1)>
         <defs>
             <symbol id="icon3d" viewBox(50% 50% 100% 100%)>
@@ -80,6 +100,8 @@
             </symbol>
     </defs>
     </svg>
+
+    <!--HERE START THE MAIN CONTENT OF THE PAGE DIVIDED BY HEADER MAIN AND FOOTER-->
     <header class="padding">
         <div class="logo">
             <div class="name">
@@ -93,14 +115,14 @@
         </div>
         <nav>
             <svg id="js-button-toggle" class="menu-toggle" width="58" height="36" viewBox="0 0 58 36" onclick="toggle_menu()">
-                <path d="M2 2H23.8919M34.5946 2H56M2 18H56M2 34H16.1081M21.9459 34H36.0541M41.8919 34H56"/>
+                <path class="tz-toggle" d="M2 2H23.8919M34.5946 2H56M2 18H56M2 34H16.1081M21.9459 34H36.0541M41.8919 34H56"/>
             </svg>     
             <ul id="js-id-menu" class="menu">
                 <li><a href="" onclick="introDisplayNone()">Inicio</a></li>
-                <li><a href="#conocimientos" onclick="introDisplayNone()">Conocimientos</a></li>
-                <li><a href="#fortalezas" onclick="introDisplayNone()">Fortalezas</a></li>
-                <li><a href="#massobremi" onclick="introDisplayNone()">Más sobre mí</a></li>
-                <li><a href="#contacto" onclick="introDisplayNone()">Contacto</a></li>
+                <li><a href="#conocimientos" onclick="introDisplayNone(), toggle_menu()">Conocimientos</a></li>
+                <li><a href="#fortalezas" onclick="introDisplayNone(), toggle_menu()">Fortalezas</a></li>
+                <li><a href="#massobremi" onclick="introDisplayNone(), toggle_menu()">Más sobre mí</a></li>
+                <li><a href="#contacto" onclick="introDisplayNone(), toggle_menu()">Contacto</a></li>
             </ul>
         </nav>
         <div class="claim">

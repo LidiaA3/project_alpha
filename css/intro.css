@@ -33,6 +33,7 @@
     padding: 0;
     gap: 2rem;
     width: calc(100% - 8rem);
+    max-width: 50rem;
 }
 
 .intro button {
@@ -45,4 +46,22 @@
 
 .intro .claim {
     font-size: 2rem;
+}
+
+.iconcontainerintro{
+    display: none;
+}
+
+@media only screen and (min-width: 750px) {
+    .intro {
+        justify-content: flex-start;
+        padding-left: 3rem;
+    }
+
+    .iconcontainerintro {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 5rem;
+    }
 }

@@ -7,6 +7,8 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 header {
     display: flex;
@@ -42,25 +44,25 @@ header {
     top: 2rem;
     right: 2rem;
     cursor: pointer;
-    transition: transform 1s ease-in-out;
+    
 }
 
     .menu {
         display: none;
         z-index: 2;
         flex-direction: column;
-        font-size: 2.4rem;
+        font-size: 2rem;
         background-color: rgba(255, 255, 255, 0.9);
         width: 70vw;
         height: 100vh;
         position: fixed;
         top: 0;
-        right: -50rem;
+        right: -70vw;
         margin: 0;
         padding: 3rem 2rem;
         list-style: none;
-        transform: translateX(-50rem);
-        
+        transform: translateX(-70vw);
+        transition: 2s ease-in-out;
     }
 
     .menu li {
@@ -96,6 +98,7 @@ h4 {
 
 .conocimientosIntro {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
     height: 60vh;
@@ -216,6 +219,7 @@ footer {
 button,
 .btn {
     width: 100%;
+    max-width: 50rem;
     background-color: #faf5f4;
     color:#4b0000;
     border: none;
@@ -248,11 +252,13 @@ button,
     gap: 0.8rem;
 }
 
-    .iconcontainer svg {
+    .iconcontainer svg,
+    .iconcontainerintro svg {
         fill: #faf5f4;
     }
 
-    .iconcontainer svg:hover {
+    .iconcontainer svg:hover,
+    .iconcontainerintro svg:hover {
         fill: #f3e3e2;
         stroke: #4b0000;
     }
@@ -283,6 +289,15 @@ button,
 
 .rects {
     rx: 4;
+}
+
+/*--display none*/
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
 }
 
 /*--colors */
@@ -347,4 +362,49 @@ button,
 }
 .bg-color-light {
     background-color: #faf5f4;
+}
+
+@media only screen and (min-width: 750px) {
+    html {
+        font-size: 72.5%;
+    }
+
+    .containerMasSobreMi {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .conocimientosIntro {
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        width: 100vw;
+        height: auto;
+        padding: 0 2rem;
+        background-color: transparent;  /*rgba(255, 255, 255, 0.5);*/
+        font-size: 1.6rem;
+        top: 3rem;
+        left: 0;
+        transform: none;
+    }
+
+        .menu li {
+            border: none;
+            margin: 0;
+        }
+
+        .menu li a {
+            color: #faf5f4;
+        }
+
+        .menu li:hover {
+            border-bottom: 3px solid #faf5f4;
+        }
 }
