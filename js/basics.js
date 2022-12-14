@@ -25,7 +25,7 @@ body.style.overflowY = 'hidden';
 
 function introDisplayNone () {
     intro.style.display = 'none';
-    toggle_button.style.stroke = "#4b0000";
+    toggle_button.style.stroke = "var(--accent-color)";
     body.style.overflowY = 'scroll';
 }
 
@@ -33,4 +33,9 @@ function introDisplayFlex () {
     intro.style.display = 'flex';
     toggle_button.style.stroke = "#faf5f4";
     body.style.overflowY = 'hidden';
+}
+
+function theme_mode () {
+    body.classList.toggle('light-mode');
+    body.classList.toggle('dark-mode');
 }

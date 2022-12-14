@@ -1,6 +1,24 @@
 html {
     font-size: 62.5%;
 }
+/*--FUNCTION CLASSES FOR THEME SWITCH MODE*/
+
+.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #0c0c1e;
+    --accent-color: #4b0000;
+    --bg-accent: #faf5f4;
+}
+
+.dark-mode {
+    --bg-color: #140000;
+    --text-color: #faf5f4;
+    --text-color-dark: #0c0c1e;
+    --accent-color: #613737;
+    --bg-accent: #faf5f4;
+}
+
+/*--Here start the rest of the style*/
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +27,8 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 header {
     display: flex;
@@ -18,7 +38,7 @@ header {
 }
 
 .logo {
-    color: #4b0000;
+    color: var(--accent-color);
 }
     .logo .name {
         display: flex;
@@ -70,6 +90,7 @@ header {
         list-style: none;
         transform: translateX(-70vw);
         transition: 2s ease-in-out;
+        scroll-margin-top: 5rem;
     }
 
     .menu li {
@@ -87,9 +108,25 @@ header {
         opacity: 0.7;
     }
 
+    .btn-menu{
+        border: 1px solid #5b5a65;
+        color: #5b5a65;
+        background-color: #faf5f45a;
+        padding: 0.5rem;
+        width: 8rem;
+        border-radius: 0.8rem;
+        text-align: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .btn-menu:hover {
+        background-color: #f3e3e2;
+    }
+
 h2 {
     font-size: 3.2rem;
-    border-bottom: 1px solid #0c0c1e;
+    border-bottom: 1px solid var(--text-color);
     margin: 1.6rem 0;
 }
 
@@ -141,7 +178,8 @@ h4 {
         padding: 1.8rem 1.2rem;
         margin: 1.2rem 0;
         align-items: center;
-        background-color: #faf5f4;
+        background-color: var(--bg-accent);
+        color: var(--text-color-dark);
         border-radius: 1rem;
     }
 
@@ -167,7 +205,8 @@ h4 {
 
 .fortalezas {
     padding: 2rem 0;
-    background-color: #faf5f4;
+    background-color: var(--bg-accent);
+    color: var(--text-color-dark);
 }
 
 .textoLineal {
@@ -181,12 +220,12 @@ h4 {
         font-weight: 900;
         font-size: 1.8rem;
         border: none;
-        color: #4b0000;
+        color: var(--accent-color);
         margin: 0 0 0 2rem;
     }
 
     .line {
-        stroke: #4b0000;
+        stroke: var(--accent-color);
         stroke-width: 0.8rem;
         stroke-linecap: round;
     }
@@ -210,7 +249,7 @@ h4 {
 
 footer {
     margin-top: 1.2rem;
-    background-color: #4b0000;
+    background-color: var(--accent-color);
     color: #faf5f4;
     padding: 2rem;
     display: flex;
@@ -227,8 +266,8 @@ button,
 .btn {
     width: 100%;
     max-width: 50rem;
-    background-color: #faf5f4;
-    color:#4b0000;
+    background-color: var(--bg-accent);
+    color:var(--accent-color);
     border: none;
     border-radius: 1rem;
     display: flex;
@@ -248,7 +287,7 @@ button,
 
     button svg,
     .btn svg {
-        fill: #4b0000;
+        fill: var(--accent-color);
     }
 
 .iconcontainer {
@@ -267,7 +306,7 @@ button,
     .iconcontainer svg:hover,
     .iconcontainerintro svg:hover {
         fill: #f3e3e2;
-        stroke: #4b0000;
+        stroke: var(--accent-color);
     }
 
 /*--UTILIDADES*/
@@ -371,6 +410,7 @@ button,
     background-color: #faf5f4;
 }
 
+/*--HERE START THE MEDIA QUERY STYLE*/
 @media only screen and (min-width: 750px) {
     html {
         font-size: 72.5%;
@@ -397,7 +437,7 @@ button,
         padding: 0 2rem;
         background-color: transparent;  /*rgba(255, 255, 255, 0.5);*/
         font-size: 1.6rem;
-        top: 3rem;
+        top: 2rem;
         left: 0;
         transform: none;
     }
@@ -411,7 +451,7 @@ button,
             color: #faf5f4;
         }
 
-        .menu li:hover {
+        .menu li a:hover {
             border-bottom: 3px solid #faf5f4;
         }
 }
