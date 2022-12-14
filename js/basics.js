@@ -1,5 +1,7 @@
 const toggle_button = document.querySelector('#js-button-toggle');
 const menu = document.querySelector('#js-id-menu');
+const tz_toggle = document.querySelector('#tz-toggle');
+const tz_blade = document.querySelector('#tz-blade');
 
 //function toggle_menu () {
 //    if (menu.style.display === 'none'|| menu.style.display === '') {
@@ -11,6 +13,8 @@ const menu = document.querySelector('#js-id-menu');
 
 function toggle_menu () {
     menu.classList.toggle('display-flex');
+    tz_toggle.classList.toggle('display-none');
+    tz_blade.classList.toggle('display-none');
 }
 
 const intro = document.querySelector('#js-intro-container');

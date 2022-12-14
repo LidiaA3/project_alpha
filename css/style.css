@@ -44,8 +44,15 @@ header {
     top: 2rem;
     right: 2rem;
     cursor: pointer;
-    
 }
+
+    .tz-toggle {
+        display: block;
+    }
+
+    .tz-blade {
+        display: none;
+    }
 
     .menu {
         display: none;
