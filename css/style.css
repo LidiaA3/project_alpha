@@ -5,21 +5,29 @@ html {
 
 .light-mode {
     --bg-color: #ffffff;
+    --bg-footer: #4b0000;
     --text-color: #0c0c1e;
     --accent-color: #4b0000;
     --bg-accent: #faf5f4;
     --text-color-beta: #5b5a65;
     --bg-color-beta: #faf5f45a;
+    --btn-bg: #faf5f4;
+    --btn-color: #4b0000;
+    --btn-bg-hover: #f3e3e2;
 }
 
 .dark-mode {
     --bg-color: #140000;
+    --bg-footer: #613737;
     --text-color: #faf5f4;
     --text-color-dark: #0c0c1e;
-    --accent-color: #613737;
+    --accent-color: #aea3a3;
     --bg-accent: #613737;
     --text-color-beta: #f3e3e2;
     --bg-color-beta: #5b5a655a;
+    --btn-bg: #faf5f4;
+    --btn-color: #4b0000;
+    --btn-bg-hover: #5b5a65;
 }
 
 /*--Here start the rest of the style*/
@@ -125,7 +133,7 @@ header {
     }
 
     .btn-menu:hover {
-        background-color: #f3e3e2;
+        background-color: var(--btn-bg-hover);
     }
 
 h2 {
@@ -183,7 +191,7 @@ h4 {
         margin: 1.2rem 0;
         align-items: center;
         background-color: var(--bg-accent);
-        color: var(--text-color-dark);
+        color: var(--text-color);
         border-radius: 1rem;
     }
 
@@ -193,6 +201,10 @@ h4 {
 
     .box:nth-child(2n) {
         margin-left: 2rem;
+    }
+
+    .box svg {
+        fill: var(--text-color);
     }
 
 .imagenPropia {
@@ -210,7 +222,7 @@ h4 {
 .fortalezas {
     padding: 2rem 0;
     background-color: var(--bg-accent);
-    color: var(--text-color-dark);
+    color: var(--text-color);
 }
 
 .textoLineal {
@@ -253,7 +265,7 @@ h4 {
 
 footer {
     margin-top: 1.2rem;
-    background-color: var(--accent-color);
+    background-color: var(--bg-footer);
     color: #faf5f4;
     padding: 2rem;
     display: flex;
@@ -270,8 +282,8 @@ button,
 .btn {
     width: 100%;
     max-width: 50rem;
-    background-color: var(--bg-accent);
-    color:var(--accent-color);
+    background-color: var(--btn-bg);
+    color:var(--btn-color);
     border: none;
     border-radius: 1rem;
     display: flex;
@@ -291,7 +303,7 @@ button,
 
     button svg,
     .btn svg {
-        fill: var(--accent-color);
+        fill: var(--btn-color);
     }
 
 .iconcontainer {
