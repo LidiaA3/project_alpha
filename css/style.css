@@ -8,6 +8,8 @@ html {
     --text-color: #0c0c1e;
     --accent-color: #4b0000;
     --bg-accent: #faf5f4;
+    --text-color-beta: #5b5a65;
+    --bg-color-beta: #faf5f45a;
 }
 
 .dark-mode {
@@ -16,6 +18,8 @@ html {
     --text-color-dark: #0c0c1e;
     --accent-color: #613737;
     --bg-accent: #faf5f4;
+    --text-color-beta: #f3e3e2;
+    --bg-color-beta: #5b5a655a;
 }
 
 /*--Here start the rest of the style*/
@@ -110,8 +114,8 @@ header {
 
     .btn-menu{
         border: 1px solid #5b5a65;
-        color: #5b5a65;
-        background-color: #faf5f45a;
+        color: var(--text-color-beta);
+        background-color: var(--bg-color-beta);
         padding: 0.5rem;
         width: 8rem;
         border-radius: 0.8rem;
