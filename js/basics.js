@@ -31,7 +31,7 @@ function introDisplayNone () {
     window.addEventListener('scroll', 
         function() {
             const scrollPosition = this.window.scrollY;
-            if (scrollPosition > 30 && this.window.screen.width < 750) {
+            if (scrollPosition > 30 || this.window.screen.width < 750) {
                 menu.style.top = 0;
             } else {
                 menu.style.top = '8rem';
