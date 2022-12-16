@@ -41,6 +41,7 @@ body {
     overflow-y: scroll;
     background-color: var(--bg-color);
     color: var(--text-color);
+    transition: all 1s ease-in-out;
 }
 header {
     display: flex;
@@ -101,7 +102,6 @@ header {
         padding: 3rem 2rem;
         list-style: none;
         transform: translateX(-70vw);
-        transition: 1s ease-in-out;
         scroll-margin-top: 5rem;
     }
 

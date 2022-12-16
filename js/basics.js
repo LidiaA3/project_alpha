@@ -36,6 +36,7 @@ function introDisplayFlex () {
     toggle_button.style.stroke = '#faf5f4';
     body.style.overflowY = 'hidden';
     menu.style.color = '#faf5f4';
+    menu.style.top = '0';
 }
 
 function theme_mode () {
