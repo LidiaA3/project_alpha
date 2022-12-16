@@ -28,6 +28,15 @@ function introDisplayNone () {
     toggle_button.style.stroke = 'var(--accent-color)';
     body.style.overflowY = 'scroll';
     menu.style.color = 'var(--accent-color)';
+    window.addEventListener('scroll', 
+        function() {
+            const scrollPosition = this.window.scrollY;
+            if (scrollPosition > 30) {
+                menu.style.top = 0;
+            } else {
+                menu.style.top = '8rem';
+            }
+    })
 }
 
 function menuA8Rem () {
@@ -46,13 +55,3 @@ function theme_mode () {
     body.classList.toggle('light-mode');
     body.classList.toggle('dark-mode');
 }
-
-window.addEventListener('scroll', 
-    function() {
-        const scrollPosition = this.window.scrollY;
-        if (scrollPosition > 30) {
-            menu.style.top = 0;
-        } else {
-            menu.style.top = '8rem';
-        }
-})
