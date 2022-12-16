@@ -428,6 +428,10 @@ button,
     background-color: #faf5f4;
 }
 
+.img-filter {
+    filter: saturate(30%);
+}
+
 /*--HERE START THE MEDIA QUERY STYLE*/
 @media only screen and (min-width: 750px) {
     html {
