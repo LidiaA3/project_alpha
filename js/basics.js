@@ -28,19 +28,29 @@ function introDisplayNone () {
     toggle_button.style.stroke = 'var(--accent-color)';
     body.style.overflowY = 'scroll';
     menu.style.color = 'var(--accent-color)';
-    window.addEventListener('scroll', 
+    window.addEventListener('resize',
         function() {
-            const scrollPosition = this.window.scrollY;
-            if (scrollPosition > 30 || this.window.screen.width < 750) {
-                menu.style.top = 0;
+            const widthScreen = this.window.screen.width;
+            if (widthScreen > 750) {
+                window.addEventListener('scroll', 
+                    function() {
+                        const scrollPosition = this.window.scrollY;
+                        if (scrollPosition > 30) {
+                            menu.style.top = 0;
+                        } else {
+                            menu.style.top = '8rem';
+                        }
+                })
             } else {
-                menu.style.top = '8rem';
+                menu.style.top = 0;
             }
-    })
+        }
+    )
+    
 }
 
 function menuA8Rem () {
-    if (window.screen.width > 750) {
+    if (this.window.screen.width > 750) {
         menu.style.top = '8rem';
     }
 }
