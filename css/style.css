@@ -46,7 +46,7 @@ header {
     display: flex;
     flex-direction: column;
     flex: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .logo {
@@ -101,26 +101,22 @@ header {
         padding: 3rem 2rem;
         list-style: none;
         transform: translateX(-70vw);
-        transition: 2s ease-in-out;
+        transition: 1s ease-in-out;
         scroll-margin-top: 5rem;
     }
 
     .menu li {
         border-bottom: 1px solid #0c0c1e;
         margin: 2rem 0;
-    }
-
-    .menu li a {
         width: 100%;
         color: #0c0c1e;
-        text-decoration: none;
     }
 
-    .menu li a:hover {
+    .menu li:hover {
         opacity: 0.7;
     }
 
-    .btn-menu{
+    .menu .btn-menu{
         border: 1px solid #5b5a65;
         color: var(--text-color-beta);
         background-color: var(--bg-color-beta);
@@ -150,6 +146,11 @@ h4 {
  
  p {
      margin: 0;
+ }
+
+ a {
+    text-decoration: none;
+    color: inherit;
  }
 
 .conocimientosIntro {
@@ -432,6 +433,10 @@ button,
         font-size: 72.5%;
     }
 
+    header {
+        gap: 3rem;
+    }
+
     .containerMasSobreMi {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -447,27 +452,33 @@ button,
     .menu {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 2rem;
         width: 100vw;
         height: auto;
         padding: 0 2rem;
-        background-color: transparent;  /*rgba(255, 255, 255, 0.5);*/
+        background-color: transparent;
         font-size: 1.6rem;
-        top: 2rem;
+        top: 8rem;
         left: 0;
         transform: none;
+        color: #faf5f4;
+        position: fixed;
     }
 
         .menu li {
             border: none;
-            margin: 0;
+            width: auto;
+            margin: 1rem 0;
+            color: inherit;
         }
 
-        .menu li a {
-            color: #faf5f4;
+        .menu li:hover {
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
         }
 
-        .menu li a:hover {
-            border-bottom: 3px solid #faf5f4;
+        .menu .btn-menu:hover {
+            border-bottom: 1px solid #5b5a65;;
         }
 }
