@@ -32,6 +32,15 @@ function introDisplayNone () {
 
 function menuA8Rem () {
     menu.style.top = '8rem';
+    window.addEventListener('scroll', 
+        function() {
+            const scrollPosition = this.window.scrollY;
+            if (scrollPosition > 30) {
+                menu.style.top = 0;
+            } else {
+                menu.style.top = '8rem';
+            }
+        })
 }
 
 function introDisplayFlex () {
@@ -46,13 +55,3 @@ function theme_mode () {
     body.classList.toggle('light-mode');
     body.classList.toggle('dark-mode');
 }
-
-window.addEventListener('scroll', 
-    function() {
-        const scrollPosition = this.window.scrollY;
-        if (scrollPosition > 30) {
-            menu.style.top = 0;
-        } else {
-            menu.style.top = '8rem';
-        }
-})
