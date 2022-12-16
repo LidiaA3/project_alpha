@@ -28,6 +28,7 @@ function introDisplayNone () {
     toggle_button.style.stroke = 'var(--accent-color)';
     body.style.overflowY = 'scroll';
     menu.style.color = 'var(--accent-color)';
+    menu.style.top = '8rem';
 }
 
 function introDisplayFlex () {
