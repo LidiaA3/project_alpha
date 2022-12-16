@@ -46,7 +46,7 @@ function theme_mode () {
 window.addEventListener('scroll', 
     function() {
         const scrollPosition = this.window.scrollY;
-        if (scrollPosition > 8) {
+        if (scrollPosition > 30) {
             menu.style.top = 0;
         } else {
             menu.style.top = '8rem';
