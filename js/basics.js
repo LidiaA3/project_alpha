@@ -3,14 +3,6 @@ const menu = document.querySelector('#js-id-menu');
 const tz_toggle = document.querySelector('#tz-toggle');
 const tz_blade = document.querySelector('#tz-blade');
 
-//function toggle_menu () {
-//    if (menu.style.display === 'none'|| menu.style.display === '') {
-//        menu.style.display = 'flex';
-//    } else {
-//        menu.style.display = 'none';
-//    }
-//}
-
 function toggle_menu () {
     menu.classList.toggle('display-flex');
     tz_toggle.classList.toggle('display-none');
@@ -31,16 +23,26 @@ function introDisplayNone () {
     window.addEventListener('scroll', 
         function() {
             const scrollPosition = this.window.scrollY;
-            if (scrollPosition > 30) {
+            if (this.window.innerWidth < 750) {
+                //mobile
                 menu.style.top = 0;
             } else {
-                menu.style.top = '8rem';
+                //desktop
+                if (scrollPosition > 30) {
+                    menu.style.top = 0;
+                } else {
+                    menu.style.top = '8rem';
+                }
             }
     })
 }
 
 function menuA8Rem () {
-    menu.style.top = '8rem';
+    if (window.innerWidth < 750) {
+        menu.style.top = 0;
+    } else {
+        menu.style.top = '8rem';
+    }
 }
 
 function introDisplayFlex () {
@@ -55,3 +57,18 @@ function theme_mode () {
     body.classList.toggle('light-mode');
     body.classList.toggle('dark-mode');
 }
+
+window.addEventListener('resize',
+    function() {
+        if (this.window.innerWidth < 750) {
+            //mobile
+            menu.style.top = 0;
+            } else {
+                //desktop
+                if (scrollPosition > 30) {
+                    menu.style.top = 0;
+                } else {
+                    menu.style.top = '8rem';
+                }
+            }
+    })
