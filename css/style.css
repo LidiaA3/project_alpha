@@ -352,7 +352,7 @@ button,
 /*--bordes svg*/
 
 .rects {
-    rx: 4;
+    rx: 0.04;
 }
 
 /*--display none*/
