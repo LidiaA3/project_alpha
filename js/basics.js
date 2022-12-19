@@ -22,8 +22,8 @@ function introDisplayNone () {
     menu.style.color = 'var(--accent-color)';
     window.addEventListener('scroll', 
         function() {
-            const scrollPosition = this.window.scrollY;
-            if (this.window.innerWidth < 750) {
+            const scrollPosition = window.scrollY;
+            if (window.innerWidth < 750) {
                 //mobile
                 menu.style.top = 0;
             } else {
@@ -60,15 +60,19 @@ function theme_mode () {
 
 window.addEventListener('resize',
     function() {
-        if (this.window.innerWidth < 750) {
+        if (window.innerWidth < 750) {
             //mobile
             menu.style.top = 0;
             } else {
                 //desktop
-                if (scrollPosition > 30) {
+                if (intro.style.display === 'flex') {
                     menu.style.top = 0;
                 } else {
-                    menu.style.top = '8rem';
+                    if (window.scrollY > 30) {
+                        menu.style.top = 0;
+                    } else {
+                        menu.style.top = '8rem';
+                    }
                 }
             }
     })
