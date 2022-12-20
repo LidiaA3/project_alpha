@@ -244,7 +244,7 @@ h4 {
 
     .line {
         stroke: var(--accent-color);
-        stroke-width: 0.8rem;
+        stroke-width: 0.4rem;
         stroke-linecap: round;
     }
 
