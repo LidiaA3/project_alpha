@@ -20,6 +20,7 @@ function introDisplayNone () {
     toggle_button.style.stroke = 'var(--accent-color)';
     body.style.overflowY = 'scroll';
     menu.style.color = 'var(--accent-color)';
+    menu.style.background = 'var(--bg-color-menu)';
     window.addEventListener('scroll', 
         function() {
             const scrollPosition = window.scrollY;
@@ -28,10 +29,14 @@ function introDisplayNone () {
                 menu.style.top = 0;
             } else {
                 //desktop
-                if (scrollPosition > 30) {
+                if (intro.style.display === 'flex') {
                     menu.style.top = 0;
                 } else {
-                    menu.style.top = '8rem';
+                    if (window.scrollY > 30) {
+                        menu.style.top = 0;
+                    } else {
+                        menu.style.top = '8rem';
+                    }
                 }
             }
     })
@@ -47,10 +52,11 @@ function menuA8Rem () {
 
 function introDisplayFlex () {
     intro.style.display = 'flex';
+    menu.style.top = 0;
     toggle_button.style.stroke = '#faf5f4';
     body.style.overflowY = 'hidden';
     menu.style.color = '#faf5f4';
-    menu.style.top = '0';
+    menu.style.background = 'transparent';
 }
 
 function theme_mode () {
@@ -76,3 +82,4 @@ window.addEventListener('resize',
                 }
             }
     })
+

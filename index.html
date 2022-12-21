@@ -127,7 +127,7 @@
                 <path id="tz-blade" class="display-none" d="M2 2L31.5 34M31.5 2L2 34" stroke="var(--accent-color)"/>
             </svg>     
             <ul id="js-id-menu" class="menu">
-                <li><a href="" onclick="introDisplayNone()">Inicio</a></li>
+                <li><a href="#" onclick="introDisplayFlex()">Inicio</a></li>
                 <li><a href="#conocimientos" onclick="introDisplayNone(), toggle_menu()">Conocimientos</a></li>
                 <li><a href="#fortalezas" onclick="introDisplayNone(), toggle_menu()">Fortalezas</a></li>
                 <li><a href="#massobremi" onclick="introDisplayNone(), toggle_menu()">Más sobre mí</a></li>
@@ -141,7 +141,7 @@
     </header>
 
     <main>
-        <section id="conocimientos" class="conocimientos padding">
+        <section id="conocimientos" class="conocimientos padding scroll-margin-top">
             <h2>Conocimientos</h2>
             <div class="conocimientosIntro">
                 <div class="divText">
@@ -221,7 +221,7 @@
             </svg>
         </section>
 
-        <section class="fortalezas" id="fortalezas">
+        <section class="fortalezas scroll-margin-top" id="fortalezas">
             <p class="padding">Soy una persona muy trabajadora y creativa. Me gusta formarme y aprender siempre cosas nuevas. Tengo una gran capacidad de aprendizaje. Además, soy muy organizada y siempre trato de mantener ese orden en todo lo que hago.</p>
             <div class="textoLineal">
                 <h2>fortalezas</h2>
@@ -231,7 +231,7 @@
             </div>
         </section>
 
-        <section class="massobremi padding" id="massobremi">
+        <section class="massobremi padding scroll-margin-top" id="massobremi">
             <h2>Más sobre mí</h2>
             <div class="containerMasSobreMi">
                 <div class="contentMasSobreMi">
@@ -253,7 +253,7 @@
             </div>
         </section>
     </main>
-    <footer id="contacto">
+    <footer id="contacto" class="scroll-margin-top">
         <a class="btn" href="mailto:lidia23-99@hotmail.es">
             <svg width="2.4rem" height="2.4rem" viewBox="0 -10 100 100">
                 <use xlink:href="#iconmail"></use>

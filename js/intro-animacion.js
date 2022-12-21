@@ -1,5 +1,5 @@
 const clipPosition = document.querySelector('#js-clip-intro');
-const varRx = 0.04;
+const varRx = '0.04';
 
 const clip = [{x: 0.30, y: 0.48, width: 0.29, height: 0.17, rx: varRx}, 
               {x: 0.32, y: 0.24, width: 0.25, height: 0.17, rx: varRx}, 
@@ -58,3 +58,6 @@ function pintarRect(rect) {
   
   clipPosition.appendChild(rectBox);
 }
+
+const contenidosIntro = document.querySelectorAll('.animacion');
+contenidosIntro.forEach( (elem) => setTimeout(() => elem.classList.remove('animacion'), 43 * 150) );

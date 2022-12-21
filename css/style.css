@@ -6,6 +6,7 @@ html {
 .light-mode {
     --bg-color: #ffffff;
     --bg-color-menu: rgba(255, 255, 255, 0.9);
+    --bg-img: linear-gradient(0deg, rgba(75, 0, 0, 0.4), rgba(75, 0, 0, 0.4)), url(../imgs/intro.jpg);
     --bg-footer: #4b0000;
     --text-color: #0c0c1e;
     --accent-color: #4b0000;
@@ -20,6 +21,7 @@ html {
 .dark-mode {
     --bg-color: #140000;
     --bg-color-menu: rgba(20, 0, 0, 0.8);
+    --bg-img: linear-gradient(0deg, rgba(75, 0, 0, 0.7), rgba(75, 0, 0, 0.7)), url(../imgs/intro.jpg);
     --bg-footer: #613737;
     --text-color: #faf5f4;
     --text-color-dark: #0c0c1e;
@@ -105,7 +107,6 @@ header {
         list-style: none;
         transform: translateX(-70vw);
         transition: 1s ease-in-out;
-        scroll-margin-top: 5rem;
     }
 
     .menu li {
@@ -149,6 +150,7 @@ h4 {
  
  p {
      margin: 0;
+     max-width: 70rem;
  }
 
  a {
@@ -239,7 +241,7 @@ h4 {
         font-size: 1.8rem;
         border: none;
         color: var(--accent-color);
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 3rem;
     }
 
     .line {
@@ -347,7 +349,12 @@ button,
 /*--margenes*/
 
 .padding {
-    padding: 0 2rem;
+    padding: 0 3rem;
+}
+
+/*--scroll margin*/
+.scroll-margin-top {
+    scroll-margin-top: 5rem;
 }
 
 /*--bordes svg*/
@@ -466,7 +473,7 @@ button,
         gap: 2rem;
         width: 100vw;
         height: auto;
-        padding: 0 2rem;
+        padding: 0 3rem;
         background-color: transparent;
         font-size: 1.6rem;
         top: 0;
