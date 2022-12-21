@@ -15,7 +15,7 @@
 <body class="light-mode">
     <!--HERE START THE INTRO SECTION-->
     <div class="intro" id="js-intro-container">
-        <div class="introcontents">
+        <div class="introcontents animacion">
             <div class="logo color-light">
                 <div class="name">
                     <p class="font-weight--bold">Lidia</p>
@@ -31,7 +31,7 @@
             </div>
             <button onclick="introDisplayNone(), menuA8Rem()">saber más</button>
         </div>
-        <div class="iconcontainerintro">
+        <div class="iconcontainerintro animacion">
             <a href="https://es.linkedin.com/in/lidia-aullana-083433213" target="_blank"><svg width="1.8rem" height="1.8rem" viewBox="0 0 100 100">
                 <use xlink:href="#linkedin"></use>
             </svg></a>
@@ -49,6 +49,13 @@
             </svg></a>
         </div>
         <div class="bg-img"></div>
+        <svg width="0" height="0">
+            <defs>
+              <clipPath id="js-clip-intro" clipPathUnits="objectBoundingBox">
+                <!--AQUÍ SE INSERTA EL ARRAY DEL CLIP-->
+              </clipPath>
+            </defs>
+        </svg>
     </div>
 
     <!--HERE START THE SVG ICONS DEFINITION-->
@@ -275,4 +282,5 @@
     </footer>
 </body>
 <script src="js/basics.js"></script>
+<script src="js/intro-animacion.js"></script>
 </html>
