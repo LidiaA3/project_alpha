@@ -56,7 +56,9 @@ function introDisplayFlex () {
     toggle_button.style.stroke = '#faf5f4';
     body.style.overflowY = 'hidden';
     menu.style.color = '#faf5f4';
-    menu.style.background = 'transparent';
+    if (window.innerWidth > 750) {
+        menu.style.background = 'transparent';
+    }
 }
 
 function theme_mode () {
@@ -69,11 +71,14 @@ window.addEventListener('resize',
         if (window.innerWidth < 750) {
             //mobile
             menu.style.top = 0;
+            menu.style.background = 'var(--bg-color-menu)';
             } else {
                 //desktop
                 if (intro.style.display === 'flex') {
                     menu.style.top = 0;
+                    menu.style.background = 'transparent';
                 } else {
+                    menu.style.background = 'var(--bg-color-menu)';
                     if (window.scrollY > 30) {
                         menu.style.top = 0;
                     } else {
