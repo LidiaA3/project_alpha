@@ -57,13 +57,13 @@ header {
 .logo {
     color: var(--accent-color);
 }
-    .logo .name {
+    .logo__name {
         display: flex;
         font-size: 3.2rem;
         margin-bottom: -0.6rem;
         justify-content: center;
     }
-    .logo .claim {
+    .logo__claim {
         display: flex;
         font-size: 1.6rem;
         justify-content: center;
@@ -92,7 +92,6 @@ header {
     }
 
     .menu {
-        display: none;
         z-index: 2;
         flex-direction: column;
         font-size: 2rem;
@@ -101,39 +100,32 @@ header {
         height: 100vh;
         position: fixed;
         top: 0;
-        right: -70vw;
+        right: 0;
         margin: 0;
         padding: 3rem 2rem;
         list-style: none;
-        transform: translateX(-70vw);
+        transform: translateX(100%);
         transition: 1s ease-in-out;
     }
 
-    .menu li {
+    .menu__item {
         border-bottom: 1px solid var(--text-color);
         margin: 2rem 0;
         width: 100%;
         color: var(--text-color);
     }
 
-    .menu li:hover {
+    .menu__item a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .menu__item:hover {
         opacity: 0.7;
     }
 
-    .menu .btn-menu{
-        border: 1px solid #5b5a65;
-        color: var(--text-color-beta);
-        background-color: var(--bg-color-beta);
-        padding: 0.5rem;
-        width: 8rem;
-        border-radius: 0.8rem;
-        text-align: center;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-
-    .btn-menu:hover {
-        background-color: var(--btn-bg-hover);
+    .menu-hidden {
+        transform: translateX(0);
     }
 
 h2 {
@@ -153,11 +145,6 @@ h4 {
      max-width: 70rem;
  }
 
- a {
-    text-decoration: none;
-    color: inherit;
- }
-
 .conocimientosIntro {
     display: flex;
     flex-direction: column;
@@ -165,11 +152,11 @@ h4 {
     gap: 2rem;
 }
 
-    .conocimientosIntro .divText {
+    .divText {
         flex: 1;
     }
 
-    .conocimientosIntro .divImg {
+    .divImg {
         width: 85vw;
         overflow: hidden;
         display: flex;
@@ -215,6 +202,7 @@ h4 {
     width: 100vw;
     overflow: hidden;
     text-align: center;
+    margin: 2rem 0;
 }
 
     .imagenPropia img {
@@ -236,7 +224,7 @@ h4 {
     margin-top: 2rem;
 }
 
-    .textoLineal h2 {
+    .textoLineal__tittle {
         font-weight: 900;
         font-size: 1.8rem;
         border: none;
@@ -284,8 +272,7 @@ footer {
 
 button,
 .btn {
-    width: 100%;
-    max-width: 50rem;
+    width: 8rem;
     background-color: var(--btn-bg);
     color:var(--btn-color);
     border: none;
@@ -309,6 +296,32 @@ button,
     button svg,
     .btn svg {
         fill: var(--btn-color);
+    }
+
+    .btn--secondary{
+        border: 1px solid var(--text-color-beta);
+        color: var(--text-color-beta);
+        background-color: var(--bg-color-beta);
+    }
+
+    .btn--secondary:hover {
+        background-color: var(--btn-bg-hover);
+    }
+
+    .btn--secondary svg {
+        fill: var(--text-color-beta);
+    }
+
+    .btn--full-width {
+        width: 100%;
+        max-width: 50rem;
+    }
+
+    .btn--small {
+        padding: 0.5rem;
+        border-radius: 0.8rem;
+        font-size: 1.2rem;
+        margin: 0;
     }
 
 .iconcontainer {
@@ -387,25 +400,18 @@ button,
     background-color: #f3e3e2;
 }
 
-.color-navy {
-    color: #1b2e3c;
+.color-crimson-dark {
+    color: #140000;
 }
-.bg-color-navy {
-    background-color: #1b2e3c;
+.bg-color-crimson-dark {
+    background-color: #140000;
 }
 
-.color-cadet {
-    color: #a3b5c2;
+.color-crimson-light {
+    color: #613737;
 }
 .bg-color-cadet {
-    background-color: #a3b5c2;
-}
-
-.color-accent {
-    color: #b0a06a;
-}
-.bg-color-accent {
-    background-color: #b0a06a;
+    background-color: #613737;
 }
 
 .color-dark {
@@ -422,6 +428,13 @@ button,
     background-color: #5b5a65;
 }
 
+.color-medium-gray {
+    color: #aea3a3;
+}
+.bg-color-medium-gray {
+    background-color: #aea3a3;
+}
+
 .color-light-grey {
     color: #aba7ad;
 }
@@ -436,12 +449,13 @@ button,
     background-color: #faf5f4;
 }
 
+/*--filtro imagenes */
 .img-filter {
     filter: saturate(30%);
 }
 
 /*--HERE START THE MEDIA QUERY STYLE*/
-@media only screen and (min-width: 750px) {
+@media screen and (min-width: 750px) {
     html {
         font-size: 72.5%;
     }
@@ -458,7 +472,7 @@ button,
         flex-direction: row;
     }
 
-    .conocimientosIntro .divImg {
+    .divImg {
         width: 35vw;
     }
 
@@ -473,7 +487,7 @@ button,
         gap: 2rem;
         width: 100vw;
         height: auto;
-        padding: 0 3rem;
+        padding: 0.5rem 3rem;
         background-color: transparent;
         font-size: 1.6rem;
         top: 0;
@@ -483,19 +497,15 @@ button,
         position: fixed;
     }
 
-        .menu li {
+        .menu__item {
             border: none;
             width: auto;
             margin: 1rem 0;
             color: inherit;
         }
 
-        .menu li:hover {
+        .menu__item:hover {
             border-bottom-width: 3px;
             border-bottom-style: solid;
-        }
-
-        .menu .btn-menu:hover {
-            border-bottom: 1px solid #5b5a65;;
         }
 }

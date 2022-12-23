@@ -4,7 +4,7 @@ const tz_toggle = document.querySelector('#tz-toggle');
 const tz_blade = document.querySelector('#tz-blade');
 
 function toggle_menu () {
-    menu.classList.toggle('display-flex');
+    menu.classList.toggle('menu-hidden');
     tz_toggle.classList.toggle('display-none');
     tz_blade.classList.toggle('display-none');
 }
@@ -46,7 +46,11 @@ function menuA8Rem () {
     if (window.innerWidth < 750) {
         menu.style.top = 0;
     } else {
-        menu.style.top = '8rem';
+        if (intro.style.display === 'flex') {
+            menu.style.top = 0;
+        } else {
+            menu.style.top = '8rem';
+        }
     }
 }
 

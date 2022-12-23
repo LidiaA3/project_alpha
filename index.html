@@ -17,11 +17,11 @@
     <div class="intro" id="js-intro-container">
         <div class="introcontents animacion">
             <div class="logo color-light">
-                <div class="name">
+                <div class="logo__name">
                     <p class="font-weight--bold">Lidia</p>
                     <p class="font-weight--thin">Aullana</p>
                 </div>
-                <div class="claim">
+                <div class="logo__claim">
                     <p class="font-weight--thin">frontend</p>
                     <p class="font-weight--bold">developer</p>
                 </div>
@@ -29,7 +29,7 @@
             <div class="introtext">
                 <p>Mi nombre es Lidia Aullana. Soy graduada en Ingeniería en Diseño Industrial y Desarrollo de Productos por la Universidad Politécnica de Valencia. He cursado el Máster en Artes Gráficas en la misma universidad. En la actualidad estudio un postgrado en Diseño y Desarrollo Interactivo Digital.</p>
             </div>
-            <button onclick="introDisplayNone(), menuA8Rem()">saber más</button>
+            <button class="btn btn--full-width" onclick="introDisplayNone(), menuA8Rem()">saber más</button>
         </div>
         <div class="iconcontainerintro animacion">
             <a href="https://es.linkedin.com/in/lidia-aullana-083433213" target="_blank"><svg width="1.8rem" height="1.8rem" viewBox="0 0 100 100">
@@ -112,11 +112,11 @@
     <!--HERE START THE MAIN CONTENT OF THE PAGE DIVIDED BY HEADER MAIN AND FOOTER-->
     <header class="padding">
         <div class="logo">
-            <div class="name">
+            <div class="logo__name">
                 <p class="font-weight--bold">Lidia</p>
                 <p class="font-weight--thin">Aullana</p>
             </div>
-            <div class="claim">
+            <div class="logo__claim">
                 <p class="font-weight--thin">frontend</p>
                 <p class="font-weight--bold">developer</p>
             </div>
@@ -127,12 +127,12 @@
                 <path id="tz-blade" class="display-none" d="M2 2L31.5 34M31.5 2L2 34" stroke="var(--accent-color)"/>
             </svg>     
             <ul id="js-id-menu" class="menu">
-                <li><a href="#" onclick="introDisplayFlex()">Inicio</a></li>
-                <li><a href="#conocimientos" onclick="introDisplayNone(), toggle_menu()">Conocimientos</a></li>
-                <li><a href="#fortalezas" onclick="introDisplayNone(), toggle_menu()">Fortalezas</a></li>
-                <li><a href="#massobremi" onclick="introDisplayNone(), toggle_menu()">Más sobre mí</a></li>
-                <li><a href="#contacto" onclick="introDisplayNone(), toggle_menu()">Contacto</a></li>
-                <li class="btn-menu" onclick="theme_mode()">theme-mode</li>
+                <li class="menu__item"><a href="#" onclick="introDisplayFlex()">Inicio</a></li>
+                <li class="menu__item"><a href="#conocimientos" onclick="introDisplayNone(), toggle_menu()">Conocimientos</a></li>
+                <li class="menu__item"><a href="#fortalezas" onclick="introDisplayNone(), toggle_menu()">Fortalezas</a></li>
+                <li class="menu__item"><a href="#massobremi" onclick="introDisplayNone(), toggle_menu()">Más sobre mí</a></li>
+                <li class="menu__item"><a href="#contacto" onclick="introDisplayNone(), toggle_menu()">Contacto</a></li>
+                <li class="btn btn--secondary btn--small" onclick="theme_mode()">theme-mode</li>
             </ul>
         </nav>
         <div class="claim">
@@ -224,7 +224,7 @@
         <section class="fortalezas scroll-margin-top" id="fortalezas">
             <p class="padding">Soy una persona muy trabajadora y creativa. Me gusta formarme y aprender siempre cosas nuevas. Tengo una gran capacidad de aprendizaje. Además, soy muy organizada y siempre trato de mantener ese orden en todo lo que hago.</p>
             <div class="textoLineal">
-                <h2>fortalezas</h2>
+                <h2 class="textoLineal__tittle">fortalezas</h2>
                 <svg width="100%" height="1rem">
                     <line class="line" x1="0" y1="50%" x2="100%" y2="50%"/>
                 </svg>
@@ -254,7 +254,7 @@
         </section>
     </main>
     <footer id="contacto" class="scroll-margin-top">
-        <a class="btn" href="mailto:lidia23-99@hotmail.es">
+        <a class="btn btn--full-width" href="mailto:lidia23-99@hotmail.es">
             <svg width="2.4rem" height="2.4rem" viewBox="0 -10 100 100">
                 <use xlink:href="#iconmail"></use>
             </svg>
