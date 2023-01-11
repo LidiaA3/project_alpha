@@ -127,12 +127,12 @@
                 <path id="tz-blade" class="display-none" d="M2 2L31.5 34M31.5 2L2 34" stroke="var(--accent-color)"/>
             </svg>     
             <ul id="js-id-menu" class="menu">
-                <li class="menu__item"><a href="#" onclick="introDisplayFlex()">Inicio</a></li>
+                <li class="menu__item"><a href="#" onclick="introDisplayFlex(), toggle_menu()">Inicio</a></li>
                 <li class="menu__item"><a href="#conocimientos" onclick="introDisplayNone(), toggle_menu()">Conocimientos</a></li>
                 <li class="menu__item"><a href="#fortalezas" onclick="introDisplayNone(), toggle_menu()">Fortalezas</a></li>
                 <li class="menu__item"><a href="#massobremi" onclick="introDisplayNone(), toggle_menu()">Más sobre mí</a></li>
                 <li class="menu__item"><a href="#contacto" onclick="introDisplayNone(), toggle_menu()">Contacto</a></li>
-                <li class="btn btn--secondary btn--small" onclick="theme_mode()">theme-mode</li>
+                <li class="btn btn--secondary btn--small" onclick="theme_mode(), toggle_menu()">theme-mode</li>
             </ul>
         </nav>
         <div class="claim">
